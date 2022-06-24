@@ -7,6 +7,15 @@ jobs:
   build_and_preview:
     if: '${{ github.event.pull_request.head.repo.full_name == github.repository }}'
     runs-on: ubuntu-latest
+    env:
+      REACT_APP_API_KEY="${{AIzaSyBkD0F1lm29nFV-bO7ylWpspwtNgxOe8Os}}"
+      REACT_APP_AUTH_DOMAIN="${{fir-recipes-3b641.firebaseapp.com}}"
+      REACT_APP_DATABASE_URL="${{fir-recipes-3b641}}"
+      REACT_APP_PROJECT_ID="${{fir-recipes-3b641}}"
+      REACT_APP_STORAGE_BUCKET="${{fir-recipes-3b641.appspot.com}}"
+      REACT_APP_MESSAGING_SENDER_ID="${{1094552580930}}"
+      REACT_APP_APP_ID="${{1:1094552580930:web:2c6878f815daa2f7530edb}}"
+      REACT_APP_MEASUREMENT_ID="${{G-HEW6419CWY}}"
     steps:
       - uses: actions/checkout@v2
       - run: npm install
